@@ -17,6 +17,13 @@ router.get("/viewall",async(req,res)=>{
     let data=await covidmodule.find()
     res.send(data)
 })
+  router.post("/patientserach",async(req,res)=>{
+    let input=req.body
+    let data=await covidmodule.find(input)
+    res.send(data)
+
+
+})
 
 
     
